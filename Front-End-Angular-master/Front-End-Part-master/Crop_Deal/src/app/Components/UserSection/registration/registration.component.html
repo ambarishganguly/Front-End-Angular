@@ -1,0 +1,79 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="my-5 offset-md-2 col-lg-6 col-md-7 offset-1g-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Registration</h3>
+                    </div>
+                    <div class="panel-body p-3">
+                        <form form #form="ngForm" (submit)="onSignUp(form)">
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="Username" name="Username" #Name="ngModel" [(ngModel)]="service.formData.userName" required>
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input type="email" placeholder="Email" name="Email" #Email="ngModel" [(ngModel)]="service.formData.userEmail" required>
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input type="text" placeholder="PhoneNo" name="PhoneNo" #PhoneNo="ngModel" [(ngModel)]="service.formData.userPhoneNo">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input type="text" placeholder="Address" name="Address" #Address="ngModel" [(ngModel)]="service.formData.userAddress">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-lock p-2"></span>
+                                    <input type="password" placeholder="Password" name="Password" #Password="ngModel" [(ngModel)]="service.formData.userPassword">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="User Type[ex-Farmer/Dealer]" name="userType" #Type="ngModel" [(ngModel)]="service.formData.userType">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="number" placeholder="BankAccount" name="userAccNo" #UserAccNo="ngModel" [(ngModel)]="service.formData.userAccNo">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="Ifsc Code" name="userIfsc" #UserIfsc="ngModel" [(ngModel)]="service.formData.userIfsc">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="Your Bank Name" name="userBankName" #BankName="ngModel" [(ngModel)]="service.formData.userBankName">
+                                </div>
+                            </div>
+                            <div class="form-group pt-3">
+                                <div class="input-field">
+                                    <span class="fa fa-user p-2"></span>
+                                    <input type="text" placeholder="Status Please" name="userStatus" #UserStatus="ngModel" [(ngModel)]="service.formData.userStatus">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block mt-4 w-100">SignIn</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
