@@ -32,6 +32,7 @@ export class AddCroponsaleComponent implements OnInit {
     cropType: new FormControl('', [Validators.required]),
     cropQty: new FormControl('', [Validators.required]),
     cropPrice: new FormControl('', [Validators.required]),
+    farmerId:new FormControl('',[Validators.required])
   })
 
   get form(){
@@ -39,29 +40,28 @@ export class AddCroponsaleComponent implements OnInit {
     return this.cropform.controls;
   }
 
-  changeRole(e:any) {
-    console.log(e.target.value);
+  changeRole(role:any) {
+    console.log(role.target.value);
   }
 
   getcrop(){
     this.serv.getAllCrop().subscribe(data=>{
       this.croplist=data;
     },(err)=>{
-     alert('Something went wrong')
+     alert('Some other ')
     });
   }
 
     addcroponSale(){
       var croponsale = new CropOnSale();
-      croponsale.cropId = this.cropform.value.cropId;
-      croponsale.cropName=this.cropform.value.cropName;
+      croponsale.cropId = this.cropform.value.cropId,
+      croponsale.cropName=this.cropform.value.cropName,
       croponsale.cropPrice=this.cropform.value.cropPrice,
       croponsale.cropQty=this.cropform.value.cropQty,
-      croponsale.cropType=this.cropform.value.cropType
-      this.userId =localStorage.getItem('userId')
-      croponsale.farmerId=this.userId;
+      croponsale.cropType=this.cropform.value.cropType,
+      croponsale.farmerId=this.cropform.value.farmerId,
       this.service.postCropOnSale(croponsale).subscribe(result=>{
-        if(result!=null){
+        if(result==null){
          alert("Crop is posted on sale Sucessfully");
          this.route.navigate(['/onSale'])
         }else{

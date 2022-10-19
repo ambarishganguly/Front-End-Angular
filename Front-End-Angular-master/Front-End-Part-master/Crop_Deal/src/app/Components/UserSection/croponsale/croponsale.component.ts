@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
 import { CropOnSale } from 'Models/croponsale.model';
 import { Crop } from 'Models/crop.model';
 import { CroponsaleService } from 'Service/croponsale.service';
-import { CropService } from 'Service/crop.service';
 
 
 @Component({
@@ -15,6 +13,10 @@ export class CroponsaleComponent implements OnInit {
 
   croponsalelist : CropOnSale[]=[];
   croplist:Crop[]=[];
+  p:number=1;
+  searchText:any;
+  totalLength:any;
+  page:number=1;
   
 
   constructor(private service:CroponsaleService) {

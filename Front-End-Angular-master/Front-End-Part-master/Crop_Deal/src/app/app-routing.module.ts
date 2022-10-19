@@ -8,18 +8,19 @@ import { SigninComponent } from './Components/AdminSection/signin/signin.compone
 import { CroponsaleComponent } from './Components/UserSection/croponsale/croponsale.component';
 import { AuthGuard } from 'src/gaurd/auth-guard.service';
 import { AddCroponsaleComponent } from './Components/UserSection/add-croponsale/add-croponsale.component';
+import { AddcropComponent } from './Components/AdminSection/addcrop/addcrop.component';
+import { DealerviewComponent } from './Components/DealerSection/dealerview/dealerview.component';
 
 const routes: Routes = [
   {path:'', component :HomepageComponent },
   {path:'login', component :LoginComponent },
   {path:'registration', component:RegistrationComponent},
   {path:'crop', component:CropComponent,canActivate:[AuthGuard]},
+  {path:'create',component:AddcropComponent,canActivate:[AuthGuard]},
   {path:'this', component:SigninComponent},
-  {path:'onSale',component:CroponsaleComponent,
-  children:[{path:'addonsale',component:AddCroponsaleComponent}],
-  
-  canActivate:[AuthGuard]},
-  {path:'addonsale',component:AddCroponsaleComponent}
+  {path:'onSale',component:CroponsaleComponent,canActivate:[AuthGuard]},
+  {path:'addonsale',component:AddCroponsaleComponent,canActivate:[AuthGuard]},
+  {path:'viewcrops',component:DealerviewComponent,canActivate:[AuthGuard]},
 ];
 
 @NgModule({

@@ -15,7 +15,7 @@ export class CroponsaleService {
   readonly baseUrl ='https://localhost:7214/api/CropOnSale';
 
   postCropOnSale(cropSaleId:any){
-    return this.http.post(this.baseUrl,cropSaleId)
+    return this.http.post<CropOnSale>(this.baseUrl,cropSaleId)
   }
 
   getCropOnSale(cropSaleId:any){

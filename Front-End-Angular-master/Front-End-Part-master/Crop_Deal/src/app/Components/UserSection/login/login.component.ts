@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
           this.responsedata = result;
           localStorage.setItem('token',this.responsedata.token);
           localStorage.getItem('token');
-          localStorage.setItem('userId',JSON.stringify(this.responsedata.userId));
+          localStorage.setItem('userid',JSON.stringify(this.responsedata.userId));
           localStorage.setItem('role',JSON.stringify(this.Login.value.role));
           // this.route.navigate(['']);
 
@@ -49,10 +49,10 @@ export class LoginComponent implements OnInit {
             this.route.navigate(['/crop'])
           } else if (this.Login.value.role == 'Dealer') {
 
-            this.route.navigate(['/onSale'])
+            this.route.navigate(['/viewcrops'])
           } else {
 
-            this.route.navigate([''])
+            this.route.navigate(['/onsale'])
           }
 
         }

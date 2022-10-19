@@ -21,6 +21,10 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { AddCroponsaleComponent } from './Components/UserSection/add-croponsale/add-croponsale.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AdminPageComponent } from './Components/AdminSection/admin-page/admin-page.component';
+import { AddcropComponent } from './Components/AdminSection/addcrop/addcrop.component';
+import { DealerviewComponent } from './Components/DealerSection/dealerview/dealerview.component';
+import { PaymentComponent } from './Components/DealerSection/payment/payment.component';
+
 
 
 export function tokengetter(){
@@ -40,6 +44,9 @@ export function tokengetter(){
     CroponsaleComponent,
     AddCroponsaleComponent,
     AdminPageComponent,
+    AddcropComponent,
+    DealerviewComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

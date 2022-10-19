@@ -15,6 +15,9 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  userlist:any=["Farmer","Dealer"];
+  status:any=["Active"];
+
   onSignUp(form: NgForm){
     this.service.postRegistration().subscribe(
       (res)=>{
@@ -27,5 +30,9 @@ export class RegistrationComponent implements OnInit {
       }
       
     )
+    
   }
+
+  
+
 }

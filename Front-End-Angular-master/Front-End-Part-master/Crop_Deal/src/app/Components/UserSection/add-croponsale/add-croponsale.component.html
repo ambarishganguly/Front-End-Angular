@@ -65,12 +65,19 @@
       
         
         <div class="mb-1">
-          <label for="exampleInputPassword1" class="form-label" style="font-weight: bold;">Crop Price</label>
-          <input type="number" class="form-control" id="exampleInputPassword1" formControlName="cropPrice">
+          <label for="exampleInputcropprice" class="form-label" style="font-weight: bold;">Crop Price</label>
+          <input type="number" class="form-control" id="exampleInputcropprice" formControlName="cropPrice">
         </div>
         <div *ngIf="form.cropPrice.touched && form.cropPrice.invalid" class="alert alert-danger">
           <div *ngIf="form.cropPrice.errors?.['required']">crop Price is required.</div>
       </div>
+      <div class="mb-1">
+        <label for="exampleInputfarmerid" class="form-label" style="font-weight: bold;">Farmer Id</label>
+        <input type="number" class="form-control" id="exampleInputfarmerid" formControlName="farmerId">
+      </div>
+      <div *ngIf="form.farmerId.touched && form.farmerId.invalid" class="alert alert-danger">
+        <div *ngIf="form.farmerId.errors?.['required']">FarmerId is required.</div>
+    </div>
         <button type="submit" class="btn btn-success" style="font-weight: bold;"  >Post Crop</button>
         <button type="back" class="btn btn-danger" style="font-weight: bold;" routerLink="/onSale">Back</button>
    </form>

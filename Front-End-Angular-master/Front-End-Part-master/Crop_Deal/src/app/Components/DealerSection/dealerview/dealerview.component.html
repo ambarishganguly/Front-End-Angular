@@ -3,9 +3,6 @@
     <div class="outer">
     <div class="card-box">
         <div class="row">
-          <div class="col-sm-4">
-            <a routerLink="/addonsale" id="addbtn"  class="btn btn-success btn-rounded">Add New</a>
-        </div>
       </div>
       <br>
         
@@ -16,27 +13,33 @@
                           <thead class="bg-primary text-dark">
                               <tr role="row">
                                 <th>Crop Sale Id</th>
-                                <th>Crop Id</th>
+                                <th>Crop Image</th>
                                 <th>Crop Name</th>
                                 <th>Crop Type</th>
                                 <th>Crop Quantityz(KG)</th>
                                 <th>Crop Price</th>
                                 <th>Farmer Id</th>
+                                <th>Farmer Address</th>
+                                <th>Farmer Name</th>
+                                <th>Farmer Phone Number</th>
                                 <th>Actions</th>
                                 </tr>
                           </thead>
                           <tbody>
-    <tr *ngFor="let item of croponsalelist | filter:searchText |
+    <tr *ngFor="let item of cropviewlist | filter:searchText |
     paginate:{ itemsPerPage: 5 , currentPage: p ,
       totalItems:totalLength }">
     <td>{{item.cropSaleId}}</td>
-    <td>{{item.cropId}}</td>
+    <td><img [src]="item.cropImage" alt="image not found" height="100" width="100"></td>
     <td>{{item.cropName}}</td>
     <td>{{item.cropType}}</td>
     <td>{{item.cropQty}}</td>
     <td>{{item.cropPrice|currency:'INR'}}</td>
     <td>{{item.farmerId}}</td>
-    <td><button routerLink="edit/{{item.cropSaleId}}" class="btn btn-primary">Edit</button> | <button (click)="delete(item.cropSaleId)" class="btn btn-danger">Delete</button></td>
+    <td>{{item.farmerAddress}}</td>
+    <td>{{item.farmerName}}</td>
+    <td>{{item.farmerPhoneNo}}</td>
+    <td><button routerLink="" class="btn btn-primary">Buy</button></td>
     </tr>
                           </tbody>
                       </table>

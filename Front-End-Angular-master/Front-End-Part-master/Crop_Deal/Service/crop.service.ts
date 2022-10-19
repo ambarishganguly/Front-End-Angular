@@ -14,24 +14,24 @@ export class CropService {
   formData: Crop = new Crop();
   readonly baseUrl ='https://localhost:7214/api/Crop';
 
-  postCrop(){
-    return this.http.post<Crop>(this.baseUrl,this.formData)
+  postCrop(cropId:any){
+    return this.http.post(this.baseUrl,cropId)
   }
 
-  getCrop(CropId:number){
-    return this.http.get<Crop>(this.baseUrl+'/'+CropId)
+  getCrop(cropId:any){
+    return this.http.get<Crop>(this.baseUrl+'/'+cropId)
   }
 
   getAllCrop():Observable<Crop[]>{
     return this.http.get<Crop[]>(this.baseUrl)
   }
 
-  updateCrop(CropId:number){
-    return this.http.put<Crop>(this.baseUrl+'/',CropId)
+  updateCrop(cropId:number){
+    return this.http.put<Crop>(this.baseUrl+'/',cropId)
   }
 
-  deleteCrop(CropId:number){
-    return this.http.delete<Crop>(this.baseUrl+'/'+CropId)
+  deleteCrop(cropId:number){
+    return this.http.delete<Crop>(this.baseUrl+'/'+cropId)
   }
 
 
