@@ -24,6 +24,7 @@ import { AdminPageComponent } from './Components/AdminSection/admin-page/admin-p
 import { AddcropComponent } from './Components/AdminSection/addcrop/addcrop.component';
 import { DealerviewComponent } from './Components/DealerSection/dealerview/dealerview.component';
 import { PaymentComponent } from './Components/DealerSection/payment/payment.component';
+import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.component';
 
 
 
@@ -47,6 +48,7 @@ export function tokengetter(){
     AddcropComponent,
     DealerviewComponent,
     PaymentComponent,
+    PagenotfoundComponent,
   ],
   imports: [
     BrowserModule,

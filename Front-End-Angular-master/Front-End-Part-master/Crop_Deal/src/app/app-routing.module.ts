@@ -10,6 +10,7 @@ import { AuthGuard } from 'src/gaurd/auth-guard.service';
 import { AddCroponsaleComponent } from './Components/UserSection/add-croponsale/add-croponsale.component';
 import { AddcropComponent } from './Components/AdminSection/addcrop/addcrop.component';
 import { DealerviewComponent } from './Components/DealerSection/dealerview/dealerview.component';
+import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {path:'', component :HomepageComponent },
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'onSale',component:CroponsaleComponent,canActivate:[AuthGuard]},
   {path:'addonsale',component:AddCroponsaleComponent,canActivate:[AuthGuard]},
   {path:'viewcrops',component:DealerviewComponent,canActivate:[AuthGuard]},
+  {path:'**',component:PagenotfoundComponent}
 ];
 
 @NgModule({

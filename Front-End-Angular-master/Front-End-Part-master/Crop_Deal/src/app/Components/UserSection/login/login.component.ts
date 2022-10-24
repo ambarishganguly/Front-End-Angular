@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
             this.route.navigate(['/viewcrops'])
           } else {
 
-            this.route.navigate(['/onsale'])
+            this.route.navigate(['/onSale'])
           }
 
         }
