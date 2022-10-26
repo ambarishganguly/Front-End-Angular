@@ -23,10 +23,10 @@
           <div *ngIf="form.role.touched && form.role.invalid" class="alert alert-danger">
             <div *ngIf="form.role.errors?.['required']">Role is required.</div>
         </div>
-        <p>Username</p>
-        <input type="text" id="txtname" class="form-control" formControlName="username" placeholder="Enter the User Name"   autocomplete="off">
-        <div *ngIf="form.username.touched && form.username.invalid" class="alert alert-danger">
-        <div *ngIf="form.username.errors?.['required']">Username is required.</div>
+        <p>Email</p>
+        <input type="text" id="txtemail" class="form-control" formControlName="email" placeholder="Enter the Email"   autocomplete="off">
+        <div *ngIf="form.email.touched && form.email.invalid" class="alert alert-danger">
+        <div *ngIf="form.email.errors?.['required']">Email is required.</div>
         </div>
 			  <p>Passwrod</p>
         <input type="password" id="txtpassword" class="form-control" formControlName="password"  placeholder="Enter the password"  autocomplete="off"> 

@@ -25,6 +25,11 @@ import { AddcropComponent } from './Components/AdminSection/addcrop/addcrop.comp
 import { DealerviewComponent } from './Components/DealerSection/dealerview/dealerview.component';
 import { PaymentComponent } from './Components/DealerSection/payment/payment.component';
 import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.component';
+import { UserstatusComponent } from './Components/AdminSection/userstatus/userstatus.component';
+import { AdminpageComponent } from './Components/AdminSection/adminpage/adminpage.component';
+import { UpdateuserComponent } from './Components/UserSection/updateuser/updateuser.component';
+import { DealerpageComponent } from './Components/DealerSection/dealerpage/dealerpage.component';
+import { FarmerpageComponent } from './Components/UserSection/farmerpage/farmerpage.component';
 
 
 
@@ -49,6 +54,11 @@ export function tokengetter(){
     DealerviewComponent,
     PaymentComponent,
     PagenotfoundComponent,
+    UserstatusComponent,
+    AdminpageComponent,
+    UpdateuserComponent,
+    DealerpageComponent,
+    FarmerpageComponent,
   ],
   imports: [
     BrowserModule,

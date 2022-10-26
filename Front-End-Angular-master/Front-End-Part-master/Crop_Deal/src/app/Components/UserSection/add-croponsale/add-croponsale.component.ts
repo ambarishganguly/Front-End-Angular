@@ -1,10 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CroponsaleService } from 'Service/croponsale.service';
 import { Router } from '@angular/router';
-import { NgForm } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { FormGroup, FormControl, Validators } from '@angular/forms'
-import { ActivatedRoute } from '@angular/router';
 import { CropService } from 'Service/crop.service';
 import { CropOnSale } from 'Models/croponsale.model';
 
@@ -59,7 +56,8 @@ export class AddCroponsaleComponent implements OnInit {
       croponsale.cropPrice=this.cropform.value.cropPrice,
       croponsale.cropQty=this.cropform.value.cropQty,
       croponsale.cropType=this.cropform.value.cropType,
-      croponsale.farmerId=this.cropform.value.farmerId,
+      this.userId =localStorage.getItem('userId')
+      croponsale.farmerId=this.userId;
       this.service.postCropOnSale(croponsale).subscribe(result=>{
         if(result==null){
          alert("Crop is posted on sale Sucessfully");

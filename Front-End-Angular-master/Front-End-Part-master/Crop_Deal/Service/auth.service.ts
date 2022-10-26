@@ -27,7 +27,7 @@ export class AuthService {
     if(_finaldata.role=='admin'){
       return true
     }else{
-      alert('you not having access');
+      alert('access denied');
       return false
     }
   }

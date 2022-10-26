@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   }
   Login = new FormGroup({
     role: new FormControl("", Validators.required),
-    username: new FormControl("", Validators.required),
+    email: new FormControl("", Validators.required),
     password: new FormControl("", Validators.required)
   });
 
@@ -39,20 +39,20 @@ export class LoginComponent implements OnInit {
           this.responsedata = result;
           localStorage.setItem('token',this.responsedata.token);
           localStorage.getItem('token');
-          localStorage.setItem('userid',JSON.stringify(this.responsedata.userId));
+          localStorage.setItem('userId',JSON.stringify(this.responsedata.userId));
           localStorage.setItem('role',JSON.stringify(this.Login.value.role));
           // this.route.navigate(['']);
 
           if (this.Login.value.role == 'Admin') {
 
 
-            this.route.navigate(['/crop'])
+            this.route.navigate(['/admin-page'])
           } else if (this.Login.value.role == 'Dealer') {
 
-            this.route.navigate(['/viewcrops'])
+            this.route.navigate(['/dealer-page'])
           } else {
 
-            this.route.navigate(['/onSale'])
+            this.route.navigate(['/farmer-page'])
           }
 
         }

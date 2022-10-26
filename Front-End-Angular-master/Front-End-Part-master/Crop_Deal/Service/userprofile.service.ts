@@ -17,4 +17,11 @@ export class UserprofileService {
   postUserProfile(){
     return this.http.post(this.baseUrl,this.formData)
   }
+
+  getUserProfile():Observable<UserProfile[]>{
+    return this.http.get<UserProfile[]>(this.baseUrl)
+  }
+  updateUserProfile(userId:any,form:any){
+    return this.http.patch(this.baseUrl+'/'+userId,form)
+  }
 }

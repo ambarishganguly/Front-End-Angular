@@ -3,6 +3,7 @@ import { HttpErrorResponse, HttpEvent, HttpHandler, HttpInterceptor, HttpRequest
 import { Injectable, Injector } from '@angular/core';
 import { catchError, Observable, throwError, BehaviorSubject, switchMap, filter, take } from 'rxjs';
 import { AuthService } from './auth.service';
+import { LoginService } from './login.service';
 import { SigninService } from './signin.service';
 
 @Injectable({
@@ -12,7 +13,7 @@ export class TokenInterceptorService implements HttpInterceptor {
 
   constructor(private inject: Injector) { }
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    let AuthService = this.inject.get(SigninService);
+    let AuthService = this.inject.get(LoginService);
     let authreq = request;
     authreq = this.AddTokenheader(request, AuthService.GetToken());
     return next.handle(authreq).pipe(

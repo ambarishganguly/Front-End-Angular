@@ -5,6 +5,7 @@
         <div class="row">
           <div class="col-sm-4">
             <a routerLink="/addonsale" id="addbtn"  class="btn btn-success btn-rounded">Add New</a>
+            <a routerLink="/farmer-page" id="backbtn"  class="btn btn-success btn-warning">Back</a>
         </div>
       </div>
       <br>
@@ -21,7 +22,7 @@
                                 <th>Crop Type</th>
                                 <th>Crop Quantityz(KG)</th>
                                 <th>Crop Price</th>
-                                <th>Farmer Id</th>
+                                <!-- <th>Farmer Id</th> -->
                                 <th>Actions</th>
                                 </tr>
                           </thead>
@@ -35,8 +36,8 @@
     <td>{{item.cropType}}</td>
     <td>{{item.cropQty}}</td>
     <td>{{item.cropPrice|currency:'INR'}}</td>
-    <td>{{item.farmerId}}</td>
-    <td><button routerLink="edit/{{item.cropSaleId}}" class="btn btn-primary">Edit</button> | <button (click)="delete(item.cropSaleId)" class="btn btn-danger">Delete</button></td>
+    <!-- <td>{{item.farmerId}}</td> -->
+    <td><button (click)="delete(item.cropSaleId)" class="btn btn-danger">Delete</button></td>
     </tr>
                           </tbody>
                       </table>

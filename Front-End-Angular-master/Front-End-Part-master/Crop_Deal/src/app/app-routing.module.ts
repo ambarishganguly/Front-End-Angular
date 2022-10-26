@@ -11,13 +11,26 @@ import { AddCroponsaleComponent } from './Components/UserSection/add-croponsale/
 import { AddcropComponent } from './Components/AdminSection/addcrop/addcrop.component';
 import { DealerviewComponent } from './Components/DealerSection/dealerview/dealerview.component';
 import { PagenotfoundComponent } from './Components/pagenotfound/pagenotfound.component';
+import { UserstatusComponent } from './Components/AdminSection/userstatus/userstatus.component';
+import { UserStatus } from 'Models/userStatus.model';
+import { AdminPageComponent } from './Components/AdminSection/admin-page/admin-page.component';
+import { DealerpageComponent } from './Components/DealerSection/dealerpage/dealerpage.component';
+import { UpdateuserComponent } from './Components/UserSection/updateuser/updateuser.component';
+import { FarmerpageComponent } from './Components/UserSection/farmerpage/farmerpage.component';
+import { PaymentComponent } from './Components/DealerSection/payment/payment.component';
 
 const routes: Routes = [
   {path:'', component :HomepageComponent },
   {path:'login', component :LoginComponent },
   {path:'registration', component:RegistrationComponent},
+  {path:'admin-page',component:AdminPageComponent,canActivate:[AuthGuard]},
+  {path:'dealer-page',component:DealerpageComponent,canActivate:[AuthGuard]},
+  {path:'payment',component:PaymentComponent,canActivate:[AuthGuard]},
+  {path:'farmer-page',component:FarmerpageComponent,canActivate:[AuthGuard]},
+  {path:'update-user',component:UpdateuserComponent,canActivate:[AuthGuard]},
   {path:'crop', component:CropComponent,canActivate:[AuthGuard]},
   {path:'create',component:AddcropComponent,canActivate:[AuthGuard]},
+  {path:'status',component:UserstatusComponent},
   {path:'this', component:SigninComponent},
   {path:'onSale',component:CroponsaleComponent,canActivate:[AuthGuard]},
   {path:'addonsale',component:AddCroponsaleComponent,canActivate:[AuthGuard]},

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+
 import { Crop } from 'Models/crop.model';
 import { CropService } from 'Service/crop.service';
 

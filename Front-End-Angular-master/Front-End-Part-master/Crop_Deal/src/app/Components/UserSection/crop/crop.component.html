@@ -6,6 +6,9 @@
       <div class="col-sm-4 mt-5 ms-3 position1">
         <a routerLink="/create" id="addbtn"  class="btn btn-success btn-rounded float-right">Add New</a>
     </div>
+    <div class="col-sm-4 mt-5 ms-3 position1">
+      <a routerLink="/admin-page" id="backbtn"  class="btn btn-warning btn-rounded float-right">Back</a>
+  </div>
     
     <div class="Search-hero  text-center">
         <input type="text" name="search" [(ngModel)]="searchText" placeholder="Search" autocomplete="off" >
@@ -36,7 +39,7 @@ paginate:{ itemsPerPage: 3 , currentPage: p ,
 <td>{{item.cropId}}</td>
 <td>{{item.cropName}}</td>
 <td><img [src]="item.cropImage" alt="image not found" height="100" width="100"></td>
-<td><button routerLink="edit/{{item.cropId}}" class="btn btn-primary">Edit</button> | <button (click)="delete(item.cropId)" class="btn btn-danger">Delete</button></td>
+<td><button (click)="delete(item.cropId)" class="btn btn-danger">Delete</button></td>
 </tr>
                       </tbody>
                   </table>
@@ -47,4 +50,5 @@ paginate:{ itemsPerPage: 3 , currentPage: p ,
         </div>
         <pagination-controls class="text-center" (pageChange)=" p =$event" style="font-weight: bolder;"></pagination-controls>
       </div>
+      
     </body>
