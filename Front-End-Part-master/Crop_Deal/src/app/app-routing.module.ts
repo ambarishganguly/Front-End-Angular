@@ -18,6 +18,7 @@ import { DealerpageComponent } from './Components/DealerSection/dealerpage/deale
 import { UpdateuserComponent } from './Components/UserSection/updateuser/updateuser.component';
 import { FarmerpageComponent } from './Components/UserSection/farmerpage/farmerpage.component';
 import { PaymentComponent } from './Components/DealerSection/payment/payment.component';
+import { UpdatedealerComponent } from './Components/DealerSection/updatedealer/updatedealer.component';
 
 const routes: Routes = [
   {path:'', component :HomepageComponent },
@@ -28,6 +29,7 @@ const routes: Routes = [
   {path:'payment',component:PaymentComponent,canActivate:[AuthGuard]},
   {path:'farmer-page',component:FarmerpageComponent,canActivate:[AuthGuard]},
   {path:'update-user',component:UpdateuserComponent,canActivate:[AuthGuard]},
+  {path: 'update-dealer', component: UpdatedealerComponent, canActivate: [AuthGuard] },
   {path:'crop', component:CropComponent,canActivate:[AuthGuard]},
   {path:'create',component:AddcropComponent,canActivate:[AuthGuard]},
   {path:'status',component:UserstatusComponent},

@@ -30,6 +30,7 @@ import { AdminpageComponent } from './Components/AdminSection/adminpage/adminpag
 import { UpdateuserComponent } from './Components/UserSection/updateuser/updateuser.component';
 import { DealerpageComponent } from './Components/DealerSection/dealerpage/dealerpage.component';
 import { FarmerpageComponent } from './Components/UserSection/farmerpage/farmerpage.component';
+import { UpdatedealerComponent } from './Components/DealerSection/updatedealer/updatedealer.component';
 
 
 
@@ -59,6 +60,7 @@ export function tokengetter(){
     UpdateuserComponent,
     DealerpageComponent,
     FarmerpageComponent,
+    UpdatedealerComponent,
   ],
   imports: [
     BrowserModule,
